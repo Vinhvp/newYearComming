@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-color: #fff;
+    --timer-box-bg:#1c2451;
+    --timer-box-txt-bg: #085391;
+    --font-txt: 'Poppins', sans-serif;
+}
+
+body{
+   height: 100vh;
+   color: var(--text-color);
+   font-family: 'Poppins',sans-serif;
+}
+.opacity{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+}
+.fireWork-content{
+    background-image: url('./sg1.jpg');
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+}
+
+.content-wrapper{
+    z-index: 99;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    font-size: 3rem;
+    font-weight: 300;
+    font-family: var(--font-txt);
+    text-transform: capitalize;
+}
+.years{
+    font-size: 15rem;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.timer > * ~ *{
+    margin-left: 4rem;
+}
+.timer-box{
+    background-color: var(--timer-box-bg);
+}
+
+
+.timer-box__count{
+    --size: 10rem;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timer-box__count > span{
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.timer-box__text{
+
+    background-color: var(--timer-box-txt-bg);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--font-txt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1200px){
+    html{
+        font-size: 60%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    html{
+        font-size:40%;
+    }
+    .content-wrapper{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
